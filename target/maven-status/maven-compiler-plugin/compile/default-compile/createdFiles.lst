@@ -1,5 +1,7 @@
 br\com\lbomfim\encurtador\service\URLService.class
 br\com\lbomfim\encurtador\controller\URLController.class
 br\com\lbomfim\encurtador\repository\URLRepository.class
+br\com\lbomfim\encurtador\config\CorsConfig$1.class
 br\com\lbomfim\encurtador\EncurtadorApplication.class
 br\com\lbomfim\encurtador\entities\URL.class
+br\com\lbomfim\encurtador\config\CorsConfig.class
