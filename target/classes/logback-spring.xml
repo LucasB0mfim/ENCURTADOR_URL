@@ -1,0 +1,34 @@
+<configuration>
+
+    <!-- Console Appender -->
+    <!-- exibe os logs no console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender -->
+    <!-- grava os logs em um arquivo: (logs/encurta.log). -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/encurta.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Níveis de Log -->
+    <!-- onde vai aparecer os logs -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- configura logs específicos para o pacote br.com.lbomfim.encurtador -->
+    <logger name="br.com.lbomfim.encurtador" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </logger>
+
+</configuration>
